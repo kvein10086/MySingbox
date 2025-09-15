@@ -1,6 +1,44 @@
 # 请在此文件中每行放置一个 .list 文件的 URL。
 # 工作流将自动从此处的链接下载文件并进行转换。
-# 例如:
-# https://raw.githubusercontent.com/user/repo/main/some_rules.list
 https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/GoogleFCM.list
 https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject.list
+https://raw.githubusercontent.com/kvein10086/MyClashRule/main/Rule/HK.list
+https://raw.githubusercontent.com/kvein10086/MyClashRule/main/Rule/JP.list
+https://raw.githubusercontent.com/kvein10086/MyClashRule/main/Rule/UM.list
+https://raw.githubusercontent.com/kvein10086/MyClashRule/main/Rule/CN.list
+https://raw.githubusercontent.com/kvein10086/MyClashRule/main/Rule/SG.list
+https://raw.githubusercontent.com/kvein10086/MyClashRule/main/Rule/China.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+https://raw.githubusercontent.com/kvein10086/MyClashRule/main/Rule/AWAvenue-Ads-Rule.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
+https://raw.githubusercontent.com/kvein10086/MyClashRule/main/Rule/Emby.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list

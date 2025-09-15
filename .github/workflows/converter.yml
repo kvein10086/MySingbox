@@ -21,8 +21,16 @@ jobs:
         id: download
         run: |
           if [ -f rules/list_sources.txt ]; then
-            while IFS= read -r url || [ -n "$url" ]; do
-              if [[ -n "$url" && ! "$url" =~ ^# ]]; then
+            while IFS= read -r line || [ -n "$line" ]; do
+              # Skip empty lines and comments
+              if [[ -z "$line" || "$line" =~ ^# ]]; then
+                continue
+              fi
+
+              # Extract URL from "ruleset=...,URL" format or if the line is just a URL
+              url=$(echo "$line" | awk -F, '{print $NF}')
+              
+              if [[ "$url" =~ ^https?:// ]]; then
                 filename=$(basename "$url")
                 curl -s -L -o "$filename" "$url"
                 echo "Downloaded $filename from $url"
@@ -33,66 +41,18 @@ jobs:
           fi
 
       - name: Convert list to JSON
-        shell: python
         run: |
-          import json
-          import os
-          from collections import defaultdict
-
-          list_files = [f for f in os.listdir('.') if f.endswith('.list')]
-          if not list_files:
-              print("No .list file found to convert.")
-              exit()
-
-          output_dir = 'rules'
-          os.makedirs(output_dir, exist_ok=True)
-
-          for list_file in list_files:
-              base_name = os.path.splitext(list_file)[0] + '.json'
-              json_file = os.path.join(output_dir, base_name)
-              
-              rules_data = defaultdict(list)
-              try:
-                  with open(list_file, 'r', encoding='utf-8') as f:
-                      for line in f:
-                          line = line.strip()
-                          if not line or line.startswith('#'):
-                              continue
-                          
-                          parts = line.split(',')
-                          if len(parts) < 2:
-                              continue
-
-                          rule_type = parts[0].lower().replace('-', '_')
-                          value = parts[1]
-
-                          if rule_type == "domain":
-                              rules_data["domain"].append(value)
-                          elif rule_type == "domain_suffix":
-                              rules_data["domain_suffix"].append(value)
-                          elif rule_type == "ip_cidr":
-                              rules_data["ip_cidr"].append(value)
-              except Exception as e:
-                  print(f"Error processing {list_file}: {e}")
-                  continue
-
-              if rules_data:
-                  output = {
-                      "version": 2,
-                      "rules": [dict(rules_data)]
-                  }
-
-                  with open(json_file, 'w', encoding='utf-8') as f:
-                      json.dump(output, f, indent=2, ensure_ascii=False)
-
-                  print(f"Converted {list_file} to {json_file}")
-              else:
-                  print(f"No rules found in {list_file}, skipping.")
+          for list_file in *.list; do
+            if [ -f "$list_file" ]; then
+              echo "Processing $list_file..."
+              python converter.py "$list_file"
+            fi
+          done
 
       - name: Commit and push if changed
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          git diff --staged --quiet || git commit -m "Automated conversion to JSON"
+          git add rules/
+          git diff --staged --quiet || git commit -m "Update rules from list sources"
           git push
