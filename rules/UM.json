@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "google.com",
+        "claude.ai",
+        "labs.google",
+        "exhentai.org",
+        "e-hentai.org"
+      ]
+    }
+  ]
+}
