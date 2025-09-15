@@ -54,11 +54,13 @@
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
       "tolerance": 50,
+      "outbounds": [],
       "include_regex": ".*"
     },
     {
       "type": "selector",
       "tag": "🚀 手动切换",
+      "outbounds": [],
       "include_regex": ".*"
     },
     {
@@ -181,6 +183,7 @@
       "tag": "🇭🇰 香港节点",
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
+      "outbounds": [],
       "include_regex": "香港|HK|Hong Kong"
     },
     {
@@ -188,6 +191,7 @@
       "tag": "🇯🇵 日本节点",
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
+      "outbounds": [],
       "include_regex": "日本|JP|Japan"
     },
     {
@@ -195,6 +199,7 @@
       "tag": "🇺🇲 美国节点",
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
+      "outbounds": [],
       "include_regex": "美国|US|America"
     },
     {
@@ -202,6 +207,7 @@
       "tag": "🇨🇳 台湾节点",
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
+      "outbounds": [],
       "include_regex": "台湾|TW|Taiwan"
     },
     {
@@ -209,6 +215,7 @@
       "tag": "🇸🇬 狮城节点",
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
+      "outbounds": [],
       "include_regex": "狮城|新加坡|SG|Singapore"
     },
     {
@@ -216,6 +223,7 @@
       "tag": "🇰🇷 韩国节点",
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
+      "outbounds": [],
       "include_regex": "韩国|KR|Korea"
     }
   ],
