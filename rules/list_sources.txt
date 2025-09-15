@@ -1,0 +1,6 @@
+# 请在此文件中每行放置一个 .list 文件的 URL。
+# 工作流将自动从此处的链接下载文件并进行转换。
+# 例如:
+# https://raw.githubusercontent.com/user/repo/main/some_rules.list
+https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/GoogleFCM.list
+https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject.list
